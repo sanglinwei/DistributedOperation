@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\usepackage[preprint]{nips_2018}
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}     
+\usepackage{hyperref}        
+\usepackage{url}             
+\usepackage{booktabs} 
+\usepackage{amsfonts} 
+\usepackage{nicefrac}        
+\usepackage{microtype}       
+\usepackage{bookmark}
+\usepackage{array}
+
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+
+\title{Distributed Operation and Control in Power Systems}
+
+\author{
+  Draft \\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+
+\end{abstract}
+
+%\tableofcontents
+\section{Lecture 1}
+\subsection{Aims}
+
+\subsection{Foundations}
+
+\subsection{Possible challenges}
+\begin{itemize}
+  \item High penetration renewables in power system requires for new methods and techonology for the stability to bulk grid, managenment, real-time calculation, low transmitting latency (0-1 bit transmitting),  
+  \item AC-DC converters
+  \item Microgrid
+  \item Different / multi- time scales for power system operation: 1) controlling perspective: trasient stability; 2) operation and energy management: steady state, economics.
+  \item what is and how to build and describe uncertainty ? robust: worst scenarios, featuring computing efficiency, conservative; stochastic: expected cost function of different scenarios, less conservative; MPC: several steps ahead, frequency control and voltage control of system. 
+  \item where is the uncertainty from: markert prices, renewables - > guassian distribution, prediction errors to decision error, end-to-end model???.
+  \item several constratints: supply demand curves, congestions, power loss.
+  \item for different uncertainty sources, there may be different uncertainty processing way. e.g. renewables: worst, prices: new.
+  \item Robust securtiy contraints: get some convex approximation of current problems given the new components of the system. 
+\end{itemize}
+
+\subsection{Possible solution by distributed algorithm}
+
+\subsection{Power flow of the system}
+
+\section*{References}
+
+\medskip
+
+\small
+
+[1] L. Badesa, F. Teng and G. Strbac, "Simultaneous Scheduling of Multiple Frequency Services in Stochastic Unit Commitment," in IEEE Transactions on Power Systems, vol. 34, no. 5, pp. 3858-3868, Sept. 2019,
+
+\end{document}
