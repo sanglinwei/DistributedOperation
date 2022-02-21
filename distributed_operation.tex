@@ -1,7 +1,8 @@
 \documentclass{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[preprint]{nips_2018}
-\usepackage[pdftex]{graphicx}
 \usepackage[utf8]{inputenc}  
 \usepackage[T1]{fontenc}     
 \usepackage{hyperref}        
@@ -27,7 +28,7 @@
 \title{Distributed Operation and Control in Power Systems}
 
 \author{
-  Draft \\
+  Class document\\
 }
 
 \begin{document}
@@ -35,7 +36,6 @@
 \maketitle
 
 \begin{abstract}
-
 
 \end{abstract}
 
@@ -264,11 +264,113 @@ Control requirements and features for PV systems:
   \item Pros and cons of PV power;
   \item Energy storage system;
   \item Uncertain system;
-  \item Solution of the system for green house;
+  \item Solution of the system for green house emission;
   \item How to recycle the PV panels in the system;
   \item {\slw further consider the accurate control policy of renewable energies}
   \item {\slw sizing and siting the PV and wind turbines to achieve ...}
 \end{enumerate}
+
+\section{Lecture 4}
+
+Diversify energy sources;
+
+Some discussion on EV:
+\begin{enumerate}
+  \item V2G;
+  \item G2V;
+  \item {\slw V2h}: utilize vehicle to support the home energy management;
+  \item Price-incentivized method;
+  \item {\slw Different price means different states of the system};
+  \item How to allocate the number/capacity of V2G, G2V, V2h for smart charging/discharging for energy arbitrage?
+  \item First we need to accumulate the info.
+  \item Final project on this topic to solve the power outage in the {\slw V2h} scenario. 
+\end{enumerate}
+
+Target of future power grid:
+\begin{enumerate}
+  \item High flexibility;
+  \item High efficiency;
+  \item Modular components: Plug-in and play system: {\slw plug-in and play learn-to-optimize};
+  \item Demand response;
+  \item Integrated energy system;
+  \item Improved dynamics performance;
+  \item Reliable optimization;
+  \item Scale and operation rules;
+\end{enumerate}
+
+\section{Lecture 5}
+
+VPP ignores the topology of the systems, which provide the service based on this feature.
+
+\textbf{Wake the sleeping resources in the energy system.}
+
+Virtual hydrogen power.
+
+VPP provides a possible initial optimal value for AC power flow.
+
+\section{Lecture 6}
+
+$$
+f_i = a_i P_i^2 + b_i P_i + c_i \\
+\text{Reserve requirements:} R_i \\
+\text{Probability:} \gamma \\
+$$
+
+\begin{eqnarray}
+  \begin{aligned}
+    f_i = a_i P_i^2 + b_i P_i + c_i \\ 
+    \text{Reserve requirements:} R_i \\
+    \text{Probability:} \gamma_i \\
+  \mathbf{P}(P_{max} - P_i \geq R_i) \geq \gamma_i \\
+  \end{aligned}
+\end{eqnarray}
+
+\section{Lecture 7}
+
+Transmission networks: R $<<$ X;
+
+Distribution networks: R $\approx $ X;
+
+Microgrid: R $$>>$$ X;
+
+$$
+\Phi(x) = \sum_{t=1}^T []
+$$
+
+What is the influence of massive DER in power system ?
+
+AC power flow needs some approximation.
+
+Fast Frequency Regulation.
+
+Physical level of system.
+
+Local control of system.
+
+Power factor correction.
+
+Frequency, voltage fluctuation.
+
+Harmonics, distortion, low-inertia, load profile distortion, bidirectional (reverse) powerflow, excess power loss,
+
+Low inertia (stability), over loading problem.
+
+EV problem
+
+Prediction problems (load shedding, day ahead scheduling.)
+
+N-1 security constraints.
+
+Upstream networks.
+
+Microgrid control architecture. 
+
+Why step-response not sine curve ?
+Because the step-response including a high spectrum of sine wave.
+
+
+\section{Lecture 8}
+
 
 
 \section*{References}
