@@ -1,0 +1,384 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[preprint]{nips_2018}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}     
+\usepackage{hyperref}        
+\usepackage{url}             
+\usepackage{booktabs} 
+\usepackage{amsfonts} 
+\usepackage{nicefrac}        
+\usepackage{microtype}       
+\usepackage{bookmark}
+\usepackage{array}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\newcommand{\slw}{\color{red}}
+\newcommand{\insight}{\color{blue}}
+
+
+\title{Distributed Operation and Control in Power Systems}
+
+\author{
+  Class document\\
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+%\tableofcontents
+\section{Lecture 1}
+\subsection{Aims}
+
+\subsection{Foundations}
+
+\subsection{Possible challenges}
+\begin{enumerate}
+  \item High penetration renewables in power system requires for new methods and technology for the stability to bulk grid, management, real-time calculation, low transmitting latency (0-1 bit transmitting),  
+  \item AC-DC converters
+  \item Microgrid
+  \item Different / multi- time scales for power system operation: 1) controlling perspective: transient stability; 2) operation and energy management: steady state, economics.
+  \item What is and how to build and describe uncertainty ? Robust: worst scenarios, featuring computing efficiency, conservative; stochastic: expected cost function of different scenarios, less conservative; MPC: several steps ahead, frequency control and voltage control of system. 
+  \item Where is the uncertainty from: market prices, renewables -> Gaussian distribution, prediction errors to decision error, end-to-end model???.
+  \item Several constraints: supply demand curves, congestions, power loss.
+  \item For different uncertainty sources, there may be different uncertainty processing way. e.g. renewables: worst, prices: new.
+  \item Robust security constraints: get some convex approximation of current problems given the new components of the system;
+  \item what is the resilient grid ?
+  \item Downward and upward flexibility. 
+  \item Grid-connected entity, grid-forming converters;
+  \item cyber-physical system (CPS theoretic foundations' system ?)
+  \item How to calculate the gap between learning and optimizing ?
+  \item Carbon footprint calculation !!!
+\end{enumerate}
+
+Generation side:
+
+What is the flexibility from the system ? This can be categorized into two types:
+Midterm !!!!
+\begin{enumerate}
+  \item Congestion;
+  \item Reserve;
+  \item Virtual inertia;
+  \item Power quality/ harmonics;
+  \item Black out;
+  \item Peak shaving;
+  \item Frequency regulation (Primary secondary, tertiary);  
+  \item Power factor correction; 
+  \item Ramping (eclipse condition);
+\end{enumerate}
+
+\begin{enumerate}
+  \item VCC;
+  \item Power factor;
+  \item Active distribution networks;
+  \item High penetration of high renewables and power electronics;
+  \item Micro-grid; 
+  \item pico grid;
+  \item vein system.
+  \item MPT plot figures;
+  \item Transition state;
+  \item Distinction between power density and energy density.
+\end{enumerate}
+
+$$
+H \frac{d \Delta f}{d t} = D \Delta f  - \sum_{j\in i} P_{ij} + P(t) + U 
+$$
+
+Network side:
+
+Demand side: 
+
+
+\subsection{Possible solution by distributed algorithm}
+
+\subsection{Power flow of the system}
+
+\newpage
+
+\section{Lecture 2}
+
+\subsection{Possible distributed algorithm challenges}
+
+1. Online distributed learning algorithm considering the convergence speed the conventional iterative / consensus-based methods.
+
+2. Learn from sparse communication networks and the fast sparse vunerality analysis of the network. 
+
+3. The calculation of LODF and shift factors is quite time-consuming which can further embeds some machine learning sparse matrix techniques.
+
+\begin{enumerate}
+  \item Robust; 
+  \item Stochastic;
+  \item MPC (applied for proposed methods) Distributionally robust optimization;
+\end{enumerate}
+
+The formulation of load information is related the node voltage and frequency.
+
+Two concepts of N-1 criteria: 1) corrective; 2) preventive for ship board power system.
+
+Grid-tied formulation;
+\begin{enumerate}
+  \item Current sources: P and Q; 
+  \item Voltage sources: V and S;
+\end{enumerate}
+
+Inertia related:
+\begin{enumerate}
+  \item RoCof;
+  \item Nadir;
+  \item Steady frequency deviation;
+\end{enumerate}
+
+Challenges for renewables: 
+
+\begin{enumerate}
+  \item low inertia;
+  \item intermittence / fluctuation;
+  \item harmonics;
+  \item uncertainty;
+  \item non-linearity;
+  \item lower market prices: power prices and capacity prices;
+  \item ramping reserve;
+\end{enumerate}
+
+Frequency droop control: proportional and integral control, (PI control) steady state errors; 
+
+Structure of networks: mesh or ring networks.
+
+
+Global control: 1) frequency; 2) reserve; 3) virtual inertia; 4) ramping; 5) blackout start; 6) peak-shaving.
+
+Locational control: 1) congestion; 2) voltage; 3) harmonics; 
+
+Distance between generation and load for reducing the power loss: local balance.
+
+50\% by 2050
+
+Price time: Time of use (ToU) price.
+
+EV fleet: aggregation of EV devices.
+
+Power networks and gas networks to lower the carbon emission.
+
+Cyber physical power Systems
+
+\newpage
+\section{Lecture 3}
+
+Background: stop building fossil generators. 
+
+Discriminate the need of power demand and energy demand in power system, power density. 
+
+The location of wind rich and load dense area is not the same, which means the disparity of energy system.
+
+The distribution of wind resources and solar with the potential of renewables is spatial and temporal. 
+
+Features of wind power:
+\begin{enumerate}
+  \item Effect of a plate on a wind flow;
+  \item Wellbull distribution;
+  \item MPPT;
+  \item Inertia from the wind turbines {\slw inertia deduction from the controlling policy, from the perspective of SCUC};
+  \item Higher total capacity;
+  \item Virtual inertia control policy and its trading, marketing mechanism design to incentivize the participation;
+  \item Swing equation from the systems;
+  \item Coupled system and decoupled systems of dynamics frequency analysis under the context of AC-DC-AC formulation;
+  \item Security analysis;
+  \item Economics analysis;
+  \item The number of blades in the wind turbines: aerodynamic analysis with changing of the blades of wind turbines to get the critical point between 3 and 4;
+  \item The places of wind turbines can be located in off-shore;
+  \item Output curve of wind power output with the relationship between the wind speed and wind power output;
+  \item Maximum peak power tracking (MPPT);
+  \item PMSG control;
+  \item DFIG control policy, park transformation;
+  \item Grid forming system: voltage source based inverter, voltage reference voltage amp. \& freq. (weak grid and bulk grid)
+  \item Grid feeding control: current-source based inverter, current reference, active \& reactive power;
+  \item Virtual inertia emulation support system;
+  \item Variable-speed wind turbine with hydrogen storage system;
+\end{enumerate}
+
+$$S^2 = P^2 + Q^2$$
+
+$$\frac{1}{1+\tau s}$$
+
+HVDC system formulation:
+
+\begin{enumerate}
+  \item Lumped model;
+  \item Long distance >= 100 km and power 200-900 MW;
+  \item DC: frequency;
+  \item features of HVDC transmission;
+  \item vertical design system;
+  \item of the wind turbine design
+\end{enumerate}
+
+Some discussion, what is the problem with rooftop WT ? (Midterm test)
+
+Solar power features:
+\begin{enumerate}
+  \item Imputed silicon;
+  \item Silicon is 2$^{nd}$ abundant element on earth;
+  \item Conductor, semi-conductor, insulator;
+\end{enumerate}
+
+PV / WT problem for more stringent problems by shaping the peak here:
+\begin{enumerate}
+  \item congestions;
+  \item over voltages;
+  \item Power ramping control (ramping constraints);
+  \item Curtailed power generation;
+  \item Delta power reserve control;
+\end{enumerate}
+
+Modifying MPPT algorithm for PV and WT; 
+Comparison clear day and cloudy day.
+
+Ramping control of the systems;
+
+Power reserve from the renewable energies for power reserve control {\slw turning the MPPT control to reserve control for participating different markets(energy market, reserve market) and some penalty inclusion system}; 
+
+Offset prediction errors and participate in reserve market;
+
+Delta power reserve control: 
+
+Feasible power region: 
+
+Reverse / inverse probation: 
+
+Control requirements and features for PV systems:
+\begin{enumerate}
+  \item PV panels
+  \item Fault ride-through;
+  \item Pros and cons of PV power;
+  \item Energy storage system;
+  \item Uncertain system;
+  \item Solution of the system for green house emission;
+  \item How to recycle the PV panels in the system;
+  \item {\slw further consider the accurate control policy of renewable energies}
+  \item {\slw sizing and siting the PV and wind turbines to achieve ...}
+\end{enumerate}
+
+\section{Lecture 4}
+
+Diversify energy sources;
+
+Some discussion on EV:
+\begin{enumerate}
+  \item V2G;
+  \item G2V;
+  \item {\slw V2h}: utilize vehicle to support the home energy management;
+  \item Price-incentivized method;
+  \item {\slw Different price means different states of the system};
+  \item How to allocate the number/capacity of V2G, G2V, V2h for smart charging/discharging for energy arbitrage?
+  \item First we need to accumulate the info.
+  \item Final project on this topic to solve the power outage in the {\slw V2h} scenario. 
+\end{enumerate}
+
+Target of future power grid:
+\begin{enumerate}
+  \item High flexibility;
+  \item High efficiency;
+  \item Modular components: Plug-in and play system: {\slw plug-in and play learn-to-optimize};
+  \item Demand response;
+  \item Integrated energy system;
+  \item Improved dynamics performance;
+  \item Reliable optimization;
+  \item Scale and operation rules;
+\end{enumerate}
+
+\section{Lecture 5}
+
+VPP ignores the topology of the systems, which provide the service based on this feature.
+
+\textbf{Wake the sleeping resources in the energy system.}
+
+Virtual hydrogen power.
+
+VPP provides a possible initial optimal value for AC power flow.
+
+\section{Lecture 6}
+
+$$
+f_i = a_i P_i^2 + b_i P_i + c_i \\
+\text{Reserve requirements:} R_i \\
+\text{Probability:} \gamma \\
+$$
+
+\begin{eqnarray}
+  \begin{aligned}
+    f_i = a_i P_i^2 + b_i P_i + c_i \\ 
+    \text{Reserve requirements:} R_i \\
+    \text{Probability:} \gamma_i \\
+  \mathbf{P}(P_{max} - P_i \geq R_i) \geq \gamma_i \\
+  \end{aligned}
+\end{eqnarray}
+
+\section{Lecture 7}
+
+Transmission networks: R $<<$ X;
+
+Distribution networks: R $\approx $ X;
+
+Microgrid: R $$>>$$ X;
+
+$$
+\Phi(x) = \sum_{t=1}^T []
+$$
+
+What is the influence of massive DER in power system ?
+
+AC power flow needs some approximation.
+
+Fast Frequency Regulation.
+
+Physical level of system.
+
+Local control of system.
+
+Power factor correction.
+
+Frequency, voltage fluctuation.
+
+Harmonics, distortion, low-inertia, load profile distortion, bidirectional (reverse) powerflow, excess power loss,
+
+Low inertia (stability), over loading problem.
+
+EV problem
+
+Prediction problems (load shedding, day ahead scheduling.)
+
+N-1 security constraints.
+
+Upstream networks.
+
+Microgrid control architecture. 
+
+Why step-response not sine curve ?
+Because the step-response including a high spectrum of sine wave.
+
+
+\section{Lecture 8}
+
+
+
+\section*{References}
+
+\medskip
+
+\small
+
+
+
+\end{document}
